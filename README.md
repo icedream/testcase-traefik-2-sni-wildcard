@@ -1,4 +1,4 @@
-# Test case for Traefik - Wrong handling of SNi vs. specific wildcard certificate
+# Test case for Traefik - Wrong handling of SNI vs. specific wildcard certificate
 
 This is a Docker Compose stack with helper script to generate usable certificate
 to test [Traefik](https://traefik.org) behavior in the case where one wildcard
