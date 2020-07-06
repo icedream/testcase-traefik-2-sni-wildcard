@@ -1,0 +1,7 @@
+[[tls.certificate]]
+	certFile = "/certs/default/cert.pem"
+	keyFile = "/certs/default/privkey.pem"
+[[tls.certificate]]
+	certFile = "/certs/specific/cert.pem"
+	keyFile = "/certs/specific/privkey.pem"
+

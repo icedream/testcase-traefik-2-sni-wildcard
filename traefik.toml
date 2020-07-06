@@ -1,0 +1,32 @@
+[global]
+  checkNewVersion = false
+  sendAnonymousUsage = false
+
+[log]
+  level = "DEBUG"
+
+[entryPoints]
+  [entryPoints.https]
+    address = ":443"
+
+  # For Traefik UI
+  [entryPoints.traefik]
+    address = ":8080"
+
+[tls]
+  [tls.options]
+    [tls.options.default]
+      minVersion = "VersionTLS12"
+
+[api]
+  insecure = true
+  dashboard = true
+
+[providers]
+  [providers.docker]
+    watch = true
+    defaultRule = "Host(`{{ index .Labels \"com.docker.compose.service\" }}.traefik.localhost`)"
+
+  [providers.file]
+    directory = "/traefik.d/"
+    watch = true
